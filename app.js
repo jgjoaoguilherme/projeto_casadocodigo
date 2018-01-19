@@ -5,7 +5,7 @@ var io= require('socket.io')(http);
 app.set('io', io);
 
 
-
-app.listen(3000, function(){
-  console.log("servidor rodando");
+var porta = process.env.PORT || 3000;
+http.listen(porta, function(){
+  console.log("servidor rodando no heroku");
 });
